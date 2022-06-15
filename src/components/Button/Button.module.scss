@@ -1,0 +1,84 @@
+.wrapper {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--text-white);
+    border: 1px solid transparent;
+    user-select: none;
+    // khi 2 khối wrapper đứng cạnh nhau cách nhau ra, nếu đứng 1 mk thì k cách
+    + .wrapper {
+        margin-left: 5px;
+    }
+    // độ ưu tiên của trạng thái này lớn hơn trạng thái khác
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.primary {
+    color: var(--text-white) !important;
+    background-color: var(--primary);
+    &:hover {
+        background: rgb(255, 33, 33);
+        background: linear-gradient(
+            54deg,
+            rgba(255, 33, 33, 1) 0%,
+            rgba(255, 147, 98, 1) 47%,
+            rgba(255, 147, 98, 1) 99%
+        );
+    }
+}
+.outline {
+    color: var(--primary) !important;
+    border-color: currentColor;
+    &:hover {
+        background: rgb(223, 179, 179);
+        background: linear-gradient(
+            54deg,
+            rgba(223, 179, 179, 1) 0%,
+            rgba(204, 173, 159, 1) 47%,
+            rgba(246, 195, 172, 1) 99%
+        );
+    }
+}
+.text {
+    &:hover {
+        text-decoration: underline !important;
+    }
+}
+.rounded {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 /6%);
+    border-color: rgba(22, 24, 35, 0.12);
+    &:hover {
+        background-color: #f5f5f5;
+    }
+}
+// class custom riêng
+.custom {
+    font-style: italic;
+}
+// size button
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+.medium {
+}
+.large {
+    min-width: 146px;
+    padding: 14px 16px;
+}
+// icon
+.left-icon {
+    margin-right: 2px;
+}
+.right-icon {
+    margin-left: 2px;
+}

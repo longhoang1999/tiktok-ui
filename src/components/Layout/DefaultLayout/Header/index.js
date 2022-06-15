@@ -3,13 +3,14 @@ import classNames from 'classnames/bind';
 // import component
 import { Wrapper as PopperWapper } from '~/components/Popper';
 import SearchAccounts from './SearchAccount';
+import Button from '~/components/Button';
 
 // img from asset
 import images from '~/assets/images';
 
 // import font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faSignIn } from '@fortawesome/free-solid-svg-icons';
 
 // import thư viện ngoài
 import Tippy from '@tippyjs/react/headless';
@@ -63,7 +64,20 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('action')}>Action</div>
+                <div className={cx('action')}>
+                    <Button to="/upload" text>
+                        Upload
+                    </Button>
+                    <Button
+                        to="login"
+                        primary
+                        classnames={cx('custom')}
+                        icon={<FontAwesomeIcon icon={faSignIn} />}
+                        leftIcon
+                    >
+                        Log in
+                    </Button>
+                </div>
             </div>
         </header>
     );
