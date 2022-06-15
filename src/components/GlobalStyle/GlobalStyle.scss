@@ -3,6 +3,13 @@
 
 :root {
     --primary: #fe2c55;
+    // Default Layout
+    --default-layout-header-hight: 60px;
+    --default-layout-width: 1150px;
+
+    // color
+    --black-color: #000;
+    --text-color: #333;
 }
 * {
     box-sizing: border-box;
@@ -18,4 +25,22 @@ body {
     font-size: 1.6rem;
     line-height: 1.2;
     text-rendering: optimizeLegibility;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+a[href] {
+    text-decoration: none;
+    color: var(--text-color);
+}
+ul {
+    list-style: none;
 }
