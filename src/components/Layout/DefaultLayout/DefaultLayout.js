@@ -1,5 +1,5 @@
-import Header from './Header';
-import Sidebar from './Sidebar';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
 import style from './DefaultLayout.module.scss';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(style);

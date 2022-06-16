@@ -1,0 +1,15 @@
+.more-menu-item {
+    width: 224px;
+
+    #btn-more-account {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        text-align: left;
+        border-radius: 0;
+        padding: 11px 16px;
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+    }
+}

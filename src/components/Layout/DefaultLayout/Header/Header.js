@@ -2,15 +2,25 @@ import style from './Header.module.scss';
 import classNames from 'classnames/bind';
 // import component
 import { Wrapper as PopperWapper } from '~/components/Popper';
-import SearchAccounts from './SearchAccount';
-import Button from '~/components/Button';
+import SearchAccounts from './SearchAccount/SearchAccount';
+import Button from '~/components/Button/Button';
+import MenuItem from '~/components/Popper/Menu/Menu';
 
 // img from asset
 import images from '~/assets/images';
 
 // import font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faSignIn } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircleXmark,
+    faSpinner,
+    faMagnifyingGlass,
+    faSignIn,
+    faEllipsisVertical,
+    faEarthAsia,
+    faCircleQuestion,
+    faKeyboard,
+} from '@fortawesome/free-solid-svg-icons';
 
 // import thư viện ngoài
 import Tippy from '@tippyjs/react/headless';
@@ -28,6 +38,24 @@ function Header() {
             serSearchResult([]);
         }, 0);
     });
+    // menu item 3 chấm
+    const MENU_ITEM = [
+        {
+            icon: <FontAwesomeIcon icon={faEarthAsia} />,
+            title: 'English',
+            to: '',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+            title: 'Feedback and Helps',
+            to: '/feedback',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faKeyboard} />,
+            title: 'Keyboard shortcuts',
+            to: '',
+        },
+    ];
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -77,6 +105,12 @@ function Header() {
                     >
                         Log in
                     </Button>
+
+                    <MenuItem items={MENU_ITEM}>
+                        <button className={cx('more-btn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </MenuItem>
                 </div>
             </div>
         </header>

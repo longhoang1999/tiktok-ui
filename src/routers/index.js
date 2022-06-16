@@ -2,7 +2,7 @@ import Home from '~/pages/Home';
 import Following from '~/pages/Following';
 import Upload from '~/pages/Upload';
 
-import UploadLayout from '~/components/Layout/UploadLayout';
+import UploadLayout from '~/components/Layout/UploadLayout/UploadLayout';
 
 const publicRouter = [
     // router không cần đăng nhập vẫn vào được
