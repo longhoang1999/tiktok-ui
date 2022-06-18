@@ -10,6 +10,7 @@
     justify-content: center;
 }
 .inner {
+    padding: 0 var(--default-inner-padding-header);
     height: 100%;
     width: var(--default-layout-width, 1150px);
     display: flex;
